@@ -5,8 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Microsoft.IdentityModel.Token.Jwt;
-using Microsoft.IdentityModel.Token;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace jwt.Controllers;
 
@@ -20,7 +20,9 @@ public class AuthController:ControllerBase{
             return BadRequest("Invalid Client request");
         }
         if(user.UserName=="Tom" && user.Password=="Jerry"){
-            var secretKey=new SymmetricSecurityKey
+            var SecretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("superSecretKey@345"));
+            var signingCredentials = new SigningCredentials(secretKey,SecurityAlgorithms.HmacSha256);
+            var TokenOptions=new
         }
     }
 }
