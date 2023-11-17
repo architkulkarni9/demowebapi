@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace jwt.Controllers
-{
-    public class AuthenticateResponse
-    {
+namespace jwt.Controllers;
+
+public class AuthenticateResponse{
+    public string? Token{get;set;}
         
     }
-}
