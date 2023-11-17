@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspnetCore.Authentication" Version="2.2.0" />
+    <!-- <PackageReference Include="Microsoft.AspnetCore.Authentication" Version="2.2.0" /> -->
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
