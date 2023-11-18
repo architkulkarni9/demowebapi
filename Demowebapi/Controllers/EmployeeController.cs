@@ -80,11 +80,11 @@ namespace Demowebapi.Controllers
         {
             try
             {
-                var detail = context.Employees.Where(d=> d.empid == id);
-                if(detail.Count() != 0)
-                {
-                    throw new Exception("Cannot Delete Movie");
-                }
+                // var detail = context.Employees.Where(d=> d.empid == id);
+                // if(detail.Count() != 0)
+                // {
+                //     throw new Exception("Cannot Delete Movie");
+                // }
                 var data = context.Employees.Find(id);
                 context.Employees.Remove(data);
                 context.SaveChanges();
