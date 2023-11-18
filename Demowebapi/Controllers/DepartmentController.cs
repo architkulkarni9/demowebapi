@@ -32,7 +32,7 @@ namespace Demowebapi.Controllers
             {
                 return BadRequest("Id cannot be null");
             }
-            var data = (from m in context.Departments where m.DepartmentId == id select m).FirstOrDefault();
+            var data = (from m in context.Departments where m.deptid == id select m).FirstOrDefault();
             if(data == null)
             {
                 return NotFound($"Department {id} not found"); //404
@@ -66,8 +66,8 @@ namespace Demowebapi.Controllers
             if(ModelState.IsValid)
             {
                 Department d = context.Departments.Find(id);
-                d.DepartmentName = department.DepartmentName;
-                d.DepartmentId = department.DepartmentId;
+                d.deptname = department.deptname;
+                d.deptid = department.deptid;
                 context.SaveChanges();
                 return Ok();
             }
@@ -81,7 +81,7 @@ namespace Demowebapi.Controllers
         {
             try
             {
-                var detail = context.Departments.Where(d=> d.DepartmentId == id);
+                var detail = context.Departments.Where(d=> d.deptid == id);
                 if(detail.Count() != 0)
                 {
                     throw new Exception("Cannot Delete Movie");

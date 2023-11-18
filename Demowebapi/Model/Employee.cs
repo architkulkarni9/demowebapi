@@ -10,6 +10,6 @@ public class Employee{
     public decimal empsalary{get;set;}
     public int deptid{get;set;}
 
-    public Department Department{get;set;}
+    public Department? Department{get;set;}
     
-}
+}`

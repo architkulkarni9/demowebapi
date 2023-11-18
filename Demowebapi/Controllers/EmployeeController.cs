@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Demowebapi.Model;
  
-namespace demowebapi.Controllers
+namespace Demowebapi.Controllers
 {
     [ApiController]
     [Route("/[controller]")]
