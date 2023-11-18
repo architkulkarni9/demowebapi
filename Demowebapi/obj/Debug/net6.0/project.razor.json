@@ -1,6 +1,6 @@
 {
-  "SerializedFilePath": "/home/coder/project/workspace/jwt/obj/Debug/net6.0/project.razor.json",
-  "FilePath": "/home/coder/project/workspace/jwt/jwt.csproj",
+  "SerializedFilePath": "/home/coder/project/workspace/Demowebapi/obj/Debug/net6.0/project.razor.json",
+  "FilePath": "/home/coder/project/workspace/Demowebapi/Demowebapi.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -18371,7 +18371,7 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "jwt",
+  "RootNamespace": "Demowebapi",
   "Documents": [],
   "SerializationFormat": "0.3"
 }
