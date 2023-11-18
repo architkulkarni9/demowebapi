@@ -1,4 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
+using Demowebapi.Model;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var con=builder.Configuration.GetConnectionString("const");
+builder.Services.AddDbContext<ApplicationDbContext>(op=>op.UseSqlServer(con));
 
 // Add services to the container.
 

@@ -1,8 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Demowebapi.Model;
 
-namespace Demowebapi.Models;
+namespace Demowebapi.Model;
 
 public class ApplicationDbContext:DbContext{
 
@@ -16,7 +15,7 @@ public class ApplicationDbContext:DbContext{
     }
     protected override void OnConfiguring(DbContextOptionsBuilder ob){
         if(!ob.IsConfigured){
-            ob.UseSqlServer("User ID=sa;password=examlyMssql@123; server=localhost;Database=EntDb;trusted_connection=false;Persist Security Info=False;Encrypt=False;");
+            ob.UseSqlServer("User ID=sa;password=examlyMssql@123; server=localhost;Database=ApplicationDb;trusted_connection=false;Persist Security Info=False;Encrypt=False;");
         }
     }
 
