@@ -66,7 +66,7 @@ namespace demowebapi.Controllers
             if(ModelState.IsValid)
             {
                 Employee e = context.Employees.Find(id);
-                emp.deptname = emp.name;
+                emp.empname = emp.name;
                 context.SaveChanges();
                 return Ok();
             }
